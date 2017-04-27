@@ -30,7 +30,7 @@ sc.fit(X_train)
 X_train_std = sc.transform(X_train)
 X_test_std = sc.transform(X_test)
 ###################################
-'''Create SVM model with a low regularization parameter, fit it and make predictions'''
+'''Create SVM model with a high regularization parameter, fit it and make predictions'''
 svm = SVC(kernel='linear', C=1.0, random_state=0)
 svm.fit(X_train_std, y_train)
 y_pred = svm.predict(X_test_std)
